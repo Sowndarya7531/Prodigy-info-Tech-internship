@@ -15,7 +15,7 @@ def encrypt_image(image_path, key):
     encrypted_image = Image.fromarray(encrypted_data.astype(np.uint8))
     encrypted_image.save("encrypted_image.png")
     print("Image encrypted and saved as encrypted_image.png")
-
+    encrypted_image.show()
 def decrypt_image(encrypted_image_path, key):
     # Open the encrypted image
     encrypted_image = Image.open(encrypted_image_path)
